@@ -6,13 +6,13 @@ def copy_file(input_f, output_f):
             f_out.write(line)
 
 # copy input file to encrypted volume, i.e., encrypt input file
-copy_file("/demo/input/input.txt", "/demo/encrypted_volume/input.txt")
+copy_file("/demo/input/imageClassification_MINST.py", "/demo/encrypted_volume/imageClassification_MINST.py")
 
 # check if this app can decrypt input file in encrypted volume
 print("=====================================================")
 print("----Verify if reading encrypted input is possible----")
 
-with open("/demo/encrypted_volume/input.txt", "r", encoding="utf-8") as f:
+with open("/demo/encrypted_volume/imageClassification_MINST.py", "r", encoding="utf-8") as f:
     for line in f: print(line)
 
 print("Finished!")
