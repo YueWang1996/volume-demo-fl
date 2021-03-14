@@ -1,5 +1,3 @@
-#!/bin/bash
-
 set -x -e
 
 # deploy the security policy session of the python app to CAS

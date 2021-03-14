@@ -1,5 +1,3 @@
-#!/bin/bash
-
 set -x -e
 
 # generate a security policy session for python app using template

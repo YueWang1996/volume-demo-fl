@@ -1,5 +1,3 @@
-#!/bin/bash
-
 set -x -e
 
 CAS_ADDR=cas
