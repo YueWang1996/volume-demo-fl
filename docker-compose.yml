@@ -17,14 +17,13 @@ services:
          - SCONE_MODE=hw
         # - SCONE_HEAP=512M
          - SCONE_SYSLIBS=1
-           # - SCONE_LOG=3
-        # - SCONE_ALLOW_DLOPEN=2
+         - SCONE_LOG=3
+         - SCONE_ALLOW_DLOPEN=2
         # - SCONE_NO_FS_SHIELD=1 
          - SCONE_FORK=1 
-         - SCONE_ALLOW_DLOPEN=2 
-         - SCONE_LOG=7 
+        # - SCONE_LOG=7 
          - SCONE_HEAP=2G 
-         - SCONE_VERSION=1
+        # - SCONE_VERSION=1
         devices:
          - "/dev/isgx"
       #  command: sh -c "apk add curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh"
