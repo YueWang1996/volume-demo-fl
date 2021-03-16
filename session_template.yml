@@ -5,7 +5,7 @@ services: #  a SCONE program with a specific software state and configuration
    - name: volume_service
      image_name: volume-demo:1.0
      command: python3 /demo/imageClassification_MINST.py # command to be executed
-     mrenclaves: [e1279dcd6acdba6968cb6ac0c1149c1976ed60ecf0ebb3a405d9e1aec658d0a2]
+     mrenclaves: [$MRENCLAVE]
      pwd: /
 
 images: # usable by services
