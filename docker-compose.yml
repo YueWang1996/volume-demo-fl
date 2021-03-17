@@ -26,7 +26,7 @@ services:
         devices:
          - "/dev/isgx"
       #  command: sh -c "apk add curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh"
-        command: -c "apk add --update curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && chmod +x newrun.sh && ./newrun.sh"
+        command: -c "apk add --update curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && chmod +x benchmarkrun.sh && ./run.sh && ./benchmarkrun.sh"
         depends_on:
          - las
          - cas
