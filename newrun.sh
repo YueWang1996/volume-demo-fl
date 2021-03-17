@@ -35,7 +35,7 @@ SCONE_VERSION=7 SCONE_CONFIG_ID=volume_policy/volume_service python3
 # generate a security policy session for python app using template
 unset MRENCLAVE SCONE_CONFIG_ID
 export MRENCLAVE=$(SCONE_HASH=1 python3) # get MRENCLAVE/HASH of python3
-envsubst '$MRENCLAVE' < session_benchmark.yml > session_benchmark.yml
+envsubst '$MRENCLAVE' < session_benchmark.yml > session_benchmark_res.yml
 unset MRENCLAVE SCONE_CONFIG_ID 
 
 # submit_policy.sh
