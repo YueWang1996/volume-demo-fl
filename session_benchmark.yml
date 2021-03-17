@@ -16,7 +16,7 @@ images: # usable by services
 
 volumes: # specify file system regions that can be mounted into the file system
   - name: benchmark_volume
-   import:
+    import:
       session: volume_policy
       volume: python_volume
 
