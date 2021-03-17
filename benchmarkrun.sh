@@ -16,7 +16,7 @@ echo "Attesting CAS ..."
 scone cas attest -G --only_for_testing-debug --only_for_testing-ignore-signer "$CAS_ADDR" "$CAS_MRENCLAVE"
 
 echo "Uploading policy to CAS ..."
-scone session create --use-env "session_benchmark.yml"
+scone session create --use-env "session_benchmark_res.yml"
 echo ""
 
 # execute the python app with the deployed security session, SCONE_CONFIG_ID --> pass remote attestation information to the container
