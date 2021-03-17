@@ -12,7 +12,8 @@ services:
          - las
     volume-demo:
         #image: registry.scontain.com:5050/sconecuratedimages/apps:python-3.7.3-alpine3.10-scone5.1
-        image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-2.0.0-musl
+        #image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-2.0.0-musl
+        image: yuewangsue/scone-paddle-musl:1.0
         environment:
          - SCONE_MODE=hw 
          - SCONE_SYSLIBS=1
@@ -25,7 +26,7 @@ services:
         devices:
          - "/dev/isgx"
       #  command: sh -c "apk add curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh"
-        command: -c "apk add --update alpine-sdk vim gfortran curl && pip3 install matplotlib && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh"
+        command: -c "apk add --update curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh"
         depends_on:
          - las
          - cas
