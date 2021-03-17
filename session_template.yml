@@ -16,6 +16,8 @@ images: # usable by services
 
 volumes: # specify file system regions that can be mounted into the file system
   - name: python_volume
+    export:
+      session: volume_policy_benchmark
 
 security: # The services' security directly depends on CAS' ability to verify that a service process has not been manipulated
   attestation:
