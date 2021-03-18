@@ -25,8 +25,8 @@ services:
          - SCONE_VERSION=1
         devices:
          - "/dev/isgx"
-      #  command: sh -c "apk add curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh"
-        command: -c "apk add --update curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && chmod +x newrun.sh && ./newrun.sh "
+      #  command: -c "apk add curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh && chmod +x benchmarkrun.sh && ./benchmarkrun.sh"
+        command: -c "apk add --update curl && cd /demo/ && chmod +x newrun.sh && ./newrun.sh "
         depends_on:
          - las
          - cas
