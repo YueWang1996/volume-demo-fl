@@ -21,7 +21,7 @@ services:
          - SCONE_ALLOW_DLOPEN=2 
          - SCONE_FORK=1 
          - SCONE_HEAP=2G 
-         - SCONE_NO_FS_SHIELD=1 
+        # - SCONE_NO_FS_SHIELD=1 
          - SCONE_VERSION=1
         devices:
          - "/dev/isgx"
