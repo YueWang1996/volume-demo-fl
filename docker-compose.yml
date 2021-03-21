@@ -12,8 +12,8 @@ services:
          - las
     volume-demo:
         #image: registry.scontain.com:5050/sconecuratedimages/apps:python-3.7.3-alpine3.10-scone5.1
-        #image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-2.0.0-musl
-        image: yuewangsue/scone-paddle-musl:1.0
+        image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-2.0.0-musl
+        #image: yuewangsue/scone-paddle-musl:1.0
         environment:
          - SCONE_MODE=hw 
          - SCONE_SYSLIBS=1
