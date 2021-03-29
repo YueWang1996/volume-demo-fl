@@ -9,7 +9,7 @@ import seaborn as sns
 print(paddle.__version__)
 
 # 从文件导入数据
-datafile = './housing.data'
+datafile = '/demo/encrypted_volume/housing.data'
 housing_data = np.fromfile(datafile, sep=' ')
 feature_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE','DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 feature_num = len(feature_names)
