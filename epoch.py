@@ -24,3 +24,6 @@ def get_mean_sd(filename):
         mean_dict[batch_size] = (m, sd)
 
     return mean_dict
+
+epoch_latency = get_mean_sd(latency_cas.log)
+print("epoch_latency:", epoch_latency)
