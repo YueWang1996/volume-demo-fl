@@ -54,3 +54,5 @@ echo ""
 
 # execute the python app with the deployed security session, SCONE_CONFIG_ID --> pass remote attestation information to the container
 SCONE_VERSION=7 SCONE_CONFIG_ID=volume_policy_benchmark/benchmark_service python3
+# latency using time command
+# SCONE_VERSION=7 SCONE_CONFIG_ID=volume_policy_benchmark/benchmark_service time python3
