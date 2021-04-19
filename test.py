@@ -6,7 +6,7 @@ def copy_file(input_f, output_f):
             f_out.write(line)
 
 # copy input file to encrypted volume, i.e., encrypt input file
-copy_file("/demo/input/imageClassification_MINST.py", "/demo/encrypted_volume/imageClassification_MINST.py")
+copy_file("/demo/input/imageClassification_MNIST.py", "/demo/encrypted_volume/imageClassification_MNIST.py")
 # for housingPrice.py benchmark, the data file is still needed to be encrypted
 # copy_file("/demo/input/housing.data", "/demo/encrypted_volume/housing.data)
 
@@ -14,7 +14,7 @@ copy_file("/demo/input/imageClassification_MINST.py", "/demo/encrypted_volume/im
 print("=====================================================")
 print("----Verify if reading encrypted input is possible----")
 
-with open("/demo/encrypted_volume/imageClassification_MINST.py", "r", encoding="utf-8") as f:
+with open("/demo/encrypted_volume/imageClassification_MNIST.py", "r", encoding="utf-8") as f:
     for line in f: print(line)
 
 print("Finished!")
