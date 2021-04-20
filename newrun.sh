@@ -56,3 +56,5 @@ echo ""
 SCONE_VERSION=7 SCONE_CONFIG_ID=volume_policy_benchmark/benchmark_service python3
 # latency using time command
 # SCONE_VERSION=7 SCONE_CONFIG_ID=volume_policy_benchmark/benchmark_service time python3
+# memory usage using time -v command
+# SCONE_VERSION=7 SCONE_CONFIG_ID=volume_policy_benchmark/benchmark_service time -v python3
