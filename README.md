@@ -4,7 +4,7 @@ This repository contains SCONE FSPF volume demo.
 ### Details
 ```bash
 docker-compose.yml: configurations of las, cas, and volume-demo services
-newrun.sh: include run.sh, deploy sessions for encrypting benchmark and running encrypted benchmark to CAS
+run.sh: perform attestation, deploy sessions for encrypting benchmark, and run encrypted benchmark with CAS service
 session_template.yml: session policy for encrypting benchmark using test.py
 test.py: encrypt benchmark from input folder to encrypted volume
 session_benchmark.yml: session policy for running encrypted benchmark imported from the encrypted volume
