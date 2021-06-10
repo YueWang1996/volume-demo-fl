@@ -4,7 +4,7 @@ version: "0.3"
 services: #  a SCONE program with a specific software state and configuration
    - name: benchmark_service
      image_name: volume-demo:1.0
-     command: python3 /demo/encrypted_volume/imageClassification_MINST.py # command to be executed
+     command: python /demo/encrypted_volume/imageClassification_MINST.py # command to be executed
      mrenclaves: [$MRENCLAVE]
      pwd: /
 
