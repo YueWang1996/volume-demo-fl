@@ -12,7 +12,7 @@ services:
          - las
     volume-demo:
         #image: registry.scontain.com:5050/sconecuratedimages/apps:python-3.7.3-alpine3.10-scone5.1
-        image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-2.0.0-musl
+        image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-fl-1.0.1-paddlepaddle1.8.0
         #image: yuewangsue/scone-paddle-musl:1.0
         environment:
          - SCONE_MODE=hw 
@@ -20,7 +20,7 @@ services:
          - SCONE_LOG=3
          - SCONE_ALLOW_DLOPEN=2 
          - SCONE_FORK=1 
-         - SCONE_HEAP=2G 
+         - SCONE_HEAP=3G 
         # -SCONE_HEAP=8G when testing imageSearch_CIFAR10.py file
         # - SCONE_NO_FS_SHIELD=1 
          - SCONE_VERSION=1
