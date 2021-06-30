@@ -12,12 +12,12 @@ services:
          - las
     volume-demo:
         #image: registry.scontain.com:5050/sconecuratedimages/apps:python-3.7.3-alpine3.10-scone5.1
-        image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-fl-1.0.1-paddlepaddle1.8.0
+        image: registry.scontain.com:5050/lequocdo/scone-paddle:paddle-fl-1.1.0-paddlepaddle1.8.0
         #image: yuewangsue/scone-paddle-musl:1.0
         environment:
          - SCONE_MODE=hw 
          - SCONE_SYSLIBS=1
-         - SCONE_LOG=3
+         - SCONE_LOG=7
          - SCONE_ALLOW_DLOPEN=2 
          - SCONE_FORK=1 
          - SCONE_HEAP=3G 
@@ -28,11 +28,13 @@ services:
          - "/dev/isgx"
       #  command: -c "apk add curl && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && ./run.sh && chmod +x benchmarkrun.sh && ./benchmarkrun.sh"
         command: -c "apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y libgl1-mesa-dev ffmpeg libsm6 libxext6 wget make gcc  \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y libgl1-mesa-dev ffmpeg libsm6 libxext6 wget make gcc vim  \
     && wget --no-check-certificate https://paddlefl.bj.bcebos.com/redis-stable.tar \
     && tar -xf redis-stable.tar && cd redis-stable &&  make && make install \
     && cd /  \
     && git clone https://github.com/PaddlePaddle/PaddleFL.git \
+	&& cd PaddleFL \
+    && git checkout 1efedf9 \
     && export PATH_TO_REDIS_BIN=/usr/local/bin/ && export REDIS_PORT=6379 && export LOCALHOST=localhost && export PYTHON=/usr/bin/python \
     && cd /demo/ && ./helper_scripts/alpine_wait_for_las_and_cas.sh && chmod +x run.sh && ./run.sh "
         depends_on:
